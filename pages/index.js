@@ -1,65 +1,39 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <main>
+      <div class="sm:py-2 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-l flex items-center space-x-4">
+        <div class="flex-shrink-1">
+          <img class="h-12 w-12" src="/vercel.svg" alt="ChitChat Logo" />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <div>
+          <div class="text-xl font-medium text-black">ChitChat</div>
+          <p class="text-gray-500">You have a new message!</p>
+        </div>
+      </div>
+      <div class="py-4 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 my-2">
+        <img
+          class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0 m"
+          src="/woman-face.jpg"
+          alt="Woman's Face"
+        />
+        <div class="py-8 text-center space-y-2 sm:text-left">
+          <div class="space-y-0.5">
+            <p class="text-lg text-black font-semibold">Erin Lindford</p>
+            <p class="text-gray-500 font-medium">Product Engineer</p>
+          </div>
+          <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+            Message
+          </button>
+        </div>
+      </div>
+      <div class="group max-w-xs text-center mx-auto border-indigo-500 hover:bg-white hover:shadow-lg hover:border-transparent">
+        <p class="text-indigo-600 group-hover:text-gray-900 ">New Project</p>
+        <p class="text-indigo-500 group-hover:text-gray-500 ">
+          Create a new project from a variety of starting templates.
+        </p>
+      </div>
+    </main>
+  );
 }
